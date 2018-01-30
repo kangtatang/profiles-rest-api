@@ -47,7 +47,7 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
     objects = UserProfileManager()
 
     USERNAME_FIELD = 'email' # standar username django adalah username, disini kita rubah ke email
-    REQUIRED_FIELD = ['name']
+    REQUIRED_FIELDS = ['name',]
 
     # create helper function
     def get_full_name(self):
